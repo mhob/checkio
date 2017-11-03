@@ -1,10 +1,14 @@
+#!/usr/bin/env python3
+
+import re
+
+
 def checkio(data):
-
-    #replace this for solution
-    return True or False
-
-#Some hints
-#Just check all conditions
+    if len(data) >= 10 and re.match(".*[0-9].*", data) \
+            and re.match(".*[a-z].*", data) \
+            and re.match(".*[A-Z].*", data):
+        return True
+    return False
 
 
 if __name__ == '__main__':
